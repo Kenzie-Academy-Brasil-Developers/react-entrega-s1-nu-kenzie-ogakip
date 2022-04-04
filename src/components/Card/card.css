@@ -1,0 +1,52 @@
+.Entrada {
+    border-left: 4px solid #03B898;
+}
+
+.Despesa {
+    border-left: 4px solid #E9ECEF;
+}
+
+.listDescription {
+    margin-left: 10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.listDescription h3 {
+    color: #212529;
+    font-weight: 900;
+}
+.listDescription span {
+    font-size: 12px;
+    color: #868E96;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.listDescription-value {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+.listDescription-value button {
+    width: 22px;
+    height: 22px;
+    border-radius: 2.46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #868E96;
+    background-color: #E9ECEF;
+}
+.listDescription-value p {
+    color: #212529;
+    font-size: 14px;
+}

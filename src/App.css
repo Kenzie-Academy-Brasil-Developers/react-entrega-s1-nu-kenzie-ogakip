@@ -1,0 +1,16 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  font-family: "Nunito";
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: white;
+    font-family: "Nunito";
+  }
+}
