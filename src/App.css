@@ -5,6 +5,31 @@
   font-family: "Nunito";
 }
 
+.home {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212529;
+  font-family: "Nunito";
+}
+
+.home img {
+  width: 200px;
+  align-self: center;
+  margin: 10px;
+}
+
+.homeDescription {
+  min-width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .App {
     width: 100vw;
@@ -12,5 +37,21 @@
     display: flex;
     background-color: white;
     font-family: "Nunito";
+  }
+
+  .home {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home img {
+    width: 400px;
+    justify-content: center;
+  }
+
+  .homeDescription {
+    min-width: 40vw;
+    flex-direction: row;
+    justify-content: center;
   }
 }

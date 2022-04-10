@@ -53,7 +53,7 @@
         margin: 100px 7% 20px 0px;
     }
     .boxList ul {
-        width: 90%;
+        width: 100%;
         height: 90%;
         display: flex;
         flex-direction: column;
@@ -75,9 +75,9 @@
     }
 
     .empty {
-        width: 70vw;
-        height: 40vh;
-        margin: 150px 20% 0px 0px;
+        width: 120vw;
+        height: 60vh;
+        margin: 120px 20% 0px 20px;
         border: 1px solid #E9ECEF;
         box-shadow: 4px 4px 10px #E9ECEF;
     }

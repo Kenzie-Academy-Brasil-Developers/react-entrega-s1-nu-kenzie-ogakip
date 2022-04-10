@@ -5,28 +5,54 @@ import FormInput from "./components/Form/form";
 import Total from "./components/TotalMoney/total";
 import Header from "./components/Header/header";
 import Encapsulate from "./components/Encapsulate/encapsulate";
+import Logo from "./components/Logo";
+import ButtonHome from "./components/buttonHome";
+import HomeDescription from "./components/homeDescription";
+import imgHome from "./svg/Group277.svg";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "Entrada", date: "04/04/2022", value: 2500 },
-    { description: "Conta de luz", type: "Despesa", date: "04/04/2022", value: -150 },
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
+  const [home, setHome] = useState(true);
 
   return (
-    <div className="App">
-      <Header />
-      <Encapsulate>
-        <FormInput
-          listTransactions={listTransactions}
-          setListTransactions={setListTransactions}
-        />
-        <Total listTransactions={listTransactions} />
-      </Encapsulate>
+    <div>
+      {home === true ? (
+        <div className="home">
+          {window.screen.width < 720 && (
+            <div>
+              <Logo className={"logoHome"} />
+            </div>
+          )}
+          <div className="homeDescription">
+          <div className="boxDescription">
+            {window.screen.width > 720 && (
+                  <Logo className={"logoHome"} />
+              )}
+              <HomeDescription toApp={setHome} />
+          </div>
+          </div>
+          <img src={imgHome} alt={"imgHome"} />
+        </div>
+      ) : (
+        <div className="App">
+          <Header>
+            <Logo className={"logo"} />
+            <ButtonHome toHome={setHome} />
+          </Header>
+          <Encapsulate>
+            <FormInput
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+            />
+            <Total listTransactions={listTransactions} />
+          </Encapsulate>
 
-      <List
-        listTransactions={listTransactions}
-        setListTransactions={setListTransactions}
-      />
+          <List
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+          />
+        </div>
+      )}
     </div>
   );
 }

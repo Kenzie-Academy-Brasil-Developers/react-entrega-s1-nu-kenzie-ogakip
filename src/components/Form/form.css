@@ -98,6 +98,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .box {
+        min-height: 450px;
+    }
     .boxTransaction {
         width: 363px;
         border: 1px solid #E9ECEF;

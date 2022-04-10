@@ -1,14 +1,9 @@
 import "./header.css";
 
-const Header = () => {
+const Header = ({children}) => {
   return (
     <div className="header">
-      <div>
-        <h1>
-          <span>Nu</span> Kenzie
-        </h1>
-        <button>Inicio</button>
-      </div>
+      {children}
     </div>
   );
 };
