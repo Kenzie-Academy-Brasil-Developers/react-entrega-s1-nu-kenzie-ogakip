@@ -38,15 +38,13 @@
 }
 
 .boxTransaction-description input {
-    width: 100%;
+    width: 95%;
     height: 42px;
     padding: 0;
     border: none;
-    background-color: #F8F9FA;
-}
-
-.boxTransaction-description input::placeholder {
     padding-left: 15px;
+    background-color: #F8F9FA;
+    outline: none;
 }
 
 .boxTransaction-inputBox {

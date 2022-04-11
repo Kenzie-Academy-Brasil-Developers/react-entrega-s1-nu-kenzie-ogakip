@@ -2,9 +2,43 @@
     width: 100vw;
     height: 500px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0px 20px 0px;
 }
+
+.boxFilter {
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxFilter p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #212529;
+}
+
+.boxFilter div {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxFilter div button {
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #E9ECEF;
+    font-size: 14px;
+    color: #5B6166;
+    font-family: "Nunito";
+    font-weight: 600;
+}
+
 .boxList ul {
     width: 80%;
     height: 90%;
@@ -32,9 +66,25 @@
 }
 
 .empty {
+    width: 100vw;
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.boxSVG {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.empty img {
+    width: 70%;
 }
 
 .empty-message {
@@ -46,7 +96,7 @@
 
 @media screen and (min-width: 768px) {
     .boxList {
-        width: 200vw;
+        min-width: 50vw;
         height: 500px;
         display: flex;
         justify-content: center;
@@ -75,9 +125,12 @@
     }
 
     .empty {
-        width: 120vw;
-        height: 60vh;
-        margin: 120px 20% 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        min-width: 50vw;
+        height: 50vh;
+        margin: 120px 7% 20px 0px;
         border: 1px solid #E9ECEF;
         box-shadow: 4px 4px 10px #E9ECEF;
     }
@@ -85,8 +138,26 @@
     .empty-message {
         color: #868E96;
         margin-top: 20px;
-        width: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 22px;
         font-weight: 600;
     }
+
+    .boxSVG {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+
+    .boxSVG img {
+        width: 60%;
+    }
+
+    
 }

@@ -3,15 +3,24 @@ import "./form.css"
 
 const FormInput = ({ listTransactions, setListTransactions }) => {
   const [description, setDescription] = useState("Sem descrição");
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
   const [option, setOption] = useState("Entrada");
 
+  const verifyNumber = () => {
+    if (value <= 0) {
+      setValue(value * -1)
+    } else {
+      setValue(value)
+    }
+    addTransactions()
+  }
+
   const currentDate = () => {
-    var date = new Date(),
+    const date = new Date(),
         day  = date.getDate().toString(),
-        dayF = (day.length == 1) ? '0'+day : day,
-        month  = (date.getMonth()+1).toString(), //+1 pois no getMonth Janeiro começa com zero.
-        monthF = (month.length == 1) ? '0'+month : month,
+        dayF = (day.length === 1) ? '0'+day : day,
+        month  = (date.getMonth()+1).toString(),
+        monthF = (month.length === 1) ? '0'+month : month,
         yearF = date.getFullYear();
     return dayF+"/"+monthF+"/"+yearF;
 }
@@ -37,13 +46,17 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
   };
 
   return (
-    <div className="boxTransaction">
+    <form onSubmit={(event) => {
+      event.preventDefault()
+      verifyNumber()
+    }} className="boxTransaction">
         <div className="boxTransaction-description">
           <p>Descrição</p>
           <input
             onChange={(event) => setDescription(event.target.value)}
             type="text"
             placeholder="Digite aqui sua descrição"
+            required
           />
           <span>Ex: Compra de roupas</span>
         </div>
@@ -55,7 +68,8 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
                 onChange={(event) => setValue(Number(event.target.value))}
                 type="number"
                 id="valueInput"
-                placeholder="1"
+                placeholder="Valor"
+                required
               />
               <span>R$</span>
             </div>
@@ -70,8 +84,8 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
             </select>
           </div>
         </div>
-        <button onClick={addTransactions}>Inserir valor</button>
-    </div>
+        <button>Inserir valor</button>
+    </form>
   );
 };
 

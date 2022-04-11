@@ -15,6 +15,10 @@
   font-family: "Nunito";
 }
 
+button {
+  cursor: pointer;
+}
+
 .home img {
   width: 200px;
   align-self: center;
