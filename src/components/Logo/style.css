@@ -1,25 +1,25 @@
 .logo {
-    font-size: 26px;
-    font-weight: 900;
-    color: #212529;
-  }
-  
+  font-size: 26px;
+  font-weight: 900;
+  color: #212529;
+}
+
 .logo span {
-    color: #fd377e;
-  }
+  color: #fd377e;
+}
 
 .logoHome {
-    font-size: 26px;
-    font-weight: 900;
-    color: #ffffff;
-  }
-  
-.logoHome span {
-    color: #fd377e;
-  }
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+}
 
-  @media screen and (min-width: 768px) {
-    .logoHome {
-      width: 290px;
-    }
+.logoHome span {
+  color: #fd377e;
+}
+
+@media screen and (min-width: 768px) {
+  .logoHome {
+    width: 290px;
   }
+}

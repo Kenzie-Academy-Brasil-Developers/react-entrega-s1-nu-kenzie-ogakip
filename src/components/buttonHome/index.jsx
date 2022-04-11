@@ -1,11 +1,13 @@
-import "./style.css"
+import "./style.css";
 
 const ButtonHome = ({ toHome }) => {
-    return (
-        <div>
-            <button className="buttonHome" onClick={() => toHome(true)}>Inicio</button>
-        </div>
-    )
-}
+  return (
+    <div>
+      <button className="buttonHome" onClick={() => toHome(true)}>
+        Inicio
+      </button>
+    </div>
+  );
+};
 
-export default ButtonHome
+export default ButtonHome;

@@ -4,7 +4,7 @@ import Card from "../Card/card";
 import emptyMessage from "../../svg/NoCard.svg";
 
 const List = ({ listTransactions, setListTransactions }) => {
-  const [listSVG] = useState([emptyMessage, emptyMessage, emptyMessage]);
+  const [listSVG] = useState([emptyMessage, emptyMessage]);
   const [filteredList, setfilteredList] = useState([]);
 
   const filterTransactions = (type) => {

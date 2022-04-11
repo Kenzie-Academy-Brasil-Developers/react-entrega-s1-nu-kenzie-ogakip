@@ -24,12 +24,10 @@ function App() {
             </div>
           )}
           <div className="homeDescription">
-          <div className="boxDescription">
-            {window.screen.width > 720 && (
-                  <Logo className={"logoHome"} />
-              )}
+            <div className="boxDescription">
+              {window.screen.width > 720 && <Logo className={"logoHome"} />}
               <HomeDescription toApp={setHome} />
-          </div>
+            </div>
           </div>
           <img src={imgHome} alt={"imgHome"} />
         </div>
@@ -39,18 +37,19 @@ function App() {
             <Logo className={"logo"} />
             <ButtonHome toHome={setHome} />
           </Header>
-          <Encapsulate>
-            <FormInput
+          <div className="main">
+            <Encapsulate>
+              <FormInput
+                listTransactions={listTransactions}
+                setListTransactions={setListTransactions}
+              />
+              <Total listTransactions={listTransactions} />
+            </Encapsulate>
+            <List
               listTransactions={listTransactions}
               setListTransactions={setListTransactions}
             />
-            <Total listTransactions={listTransactions} />
-          </Encapsulate>
-
-          <List
-            listTransactions={listTransactions}
-            setListTransactions={setListTransactions}
-          />
+          </div>
         </div>
       )}
     </div>

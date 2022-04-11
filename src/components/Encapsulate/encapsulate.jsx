@@ -1,13 +1,7 @@
-import "./encapsulate.css"
+import "./encapsulate.css";
 
 const Encapsulate = ({ children }) => {
-    return (
+  return <div className="box">{children}</div>;
+};
 
-        <div className="box">
-            {children}
-        </div>
-
-    )
-}
-
-export default Encapsulate
+export default Encapsulate;

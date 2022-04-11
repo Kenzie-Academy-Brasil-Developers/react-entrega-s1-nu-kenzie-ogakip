@@ -1,54 +1,54 @@
 .description {
-    width: 90vw;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 30px 0px 30px 0px;
+  width: 90vw;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 0px 30px 0px;
 }
 
 .description h1 {
-    font-size: 38px;
-    font-weight: 800;
-    color: white;
+  font-size: 38px;
+  font-weight: 800;
+  color: white;
 }
 
 .description span {
-    font-size: 16px;
-    font-weight: 400;
-    color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 .description button {
-    width: 55%;
-    min-width: 165px;
-    min-height: 48px;
-    font-family: "Nunito";
-    background-color: #FD377E;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    color: white;
-    font-weight: 600px;
-    font-size: 16px;
-    align-self: center;
+  width: 55%;
+  min-width: 165px;
+  min-height: 48px;
+  font-family: "Nunito";
+  background-color: #fd377e;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 600px;
+  font-size: 16px;
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
-    .description {
-        width: 25vw;
-        height: 255px;
-    }
+  .description {
+    width: 25vw;
+    height: 255px;
+  }
 
-    .description button {
-        align-self: baseline;
-        cursor: pointer;
-    }
+  .description button {
+    align-self: baseline;
+    cursor: pointer;
+  }
 
-    .boxDescription {
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  .boxDescription {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
