@@ -3,8 +3,16 @@
   height: 250px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: space-between;
   margin: 30px 0px 30px 0px;
+}
+
+.boxDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .description h1 {
@@ -47,8 +55,13 @@
 
   .boxDescription {
     height: 300px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .logoBox {
+    text-align: center;
+  }
+  .description button {
+    align-self: center;
   }
 }

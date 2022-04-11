@@ -55,6 +55,7 @@ const List = ({ listTransactions, setListTransactions }) => {
                     id={index}
                     listTransactions={listTransactions}
                     setListTransactions={setListTransactions}
+                    key={index}
                   />
                 );
               })}
@@ -68,6 +69,7 @@ const List = ({ listTransactions, setListTransactions }) => {
                     id={index}
                     listTransactions={listTransactions}
                     setListTransactions={setListTransactions}
+                    key={index}
                   />
                 );
               })}

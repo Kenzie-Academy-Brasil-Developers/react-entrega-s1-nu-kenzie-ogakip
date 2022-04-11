@@ -22,6 +22,7 @@ label {
   border: none;
   color: white;
   background-color: #fd377e;
+  outline: none;
 }
 
 .boxTransaction-description {

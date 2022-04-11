@@ -9,10 +9,11 @@
 
 .home {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #212529;
   font-family: "Nunito";
 }
@@ -29,7 +30,6 @@ button {
 
 .homeDescription {
   width: 100vw;
-  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,7 @@ button {
   }
 
   .homeDescription {
-    min-width: 40vw;
+    width: 40vw;
     flex-direction: row;
     justify-content: center;
   }
