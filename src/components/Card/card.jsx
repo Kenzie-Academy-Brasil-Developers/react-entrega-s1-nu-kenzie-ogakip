@@ -16,7 +16,14 @@ const Card = ({ transaction, id, listTransactions, setListTransactions }) => {
         <span className="date">{transaction.date}</span>
       </div>
       <div className="listDescription-value">
-        <p>R$ {transaction.value.toFixed(2)}</p>
+        <p>
+          R${" "}
+          {transaction.value < 0 ? (
+            <>{transaction.value * -1}</>
+          ) : (
+            <>{transaction.value}</>
+          )}
+        </p>
         <button onClick={() => remove()} className="trash" id={id}>
           <i className="fa-solid fa-trash"></i>
         </button>

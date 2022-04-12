@@ -6,15 +6,6 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
   const [value, setValue] = useState(0);
   const [option, setOption] = useState("Entrada");
 
-  const verifyNumber = () => {
-    if (value <= 0) {
-      setValue(value * -1);
-    } else {
-      setValue(value);
-    }
-    addTransactions();
-  };
-
   const currentDate = () => {
     const date = new Date(),
       day = date.getDate().toString(),
@@ -31,7 +22,7 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
         description: description,
         date: currentDate(),
         type: option,
-        value: -value,
+        value: value,
       };
       setListTransactions([...listTransactions, newtranslation]);
     } else if (option === "Entrada") {
@@ -49,7 +40,7 @@ const FormInput = ({ listTransactions, setListTransactions }) => {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        verifyNumber();
+        addTransactions();
       }}
       className="boxTransaction"
     >

@@ -1,9 +1,22 @@
 import "./total.css";
-import { useEffect } from "react";
 
 const Total = ({ listTransactions }) => {
   const sumTotal = () => {
-    const sum = listTransactions.reduce((val1, curr) => val1 + curr.value, 0);
+    const sum = listTransactions.reduce((val1, curr) => {
+      if (curr.type === "Entrada") {
+        if (curr.value < 0) {
+          return val1 + Math.abs(curr.value);
+        } else {
+          return val1 + curr.value;
+        }
+      } else {
+        if (curr.value < 0) {
+          return val1 - Math.abs(curr.value);
+        } else {
+          return val1 - curr.value;
+        }
+      }
+    }, 0);
     return sum;
   };
 
