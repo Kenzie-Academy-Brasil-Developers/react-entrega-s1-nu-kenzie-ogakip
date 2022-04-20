@@ -24,8 +24,8 @@ const List = ({ listTransactions, setListTransactions }) => {
       <div className="empty">
         <p className="empty-message">Você ainda não possui nenhum lançamento</p>
         <div className="boxSVG">
-          {listSVG.map((element) => (
-            <img src={element} alt="img svg" />
+          {listSVG.map((element, index) => (
+            <img src={element} key={index} alt="img svg" />
           ))}
         </div>
       </div>

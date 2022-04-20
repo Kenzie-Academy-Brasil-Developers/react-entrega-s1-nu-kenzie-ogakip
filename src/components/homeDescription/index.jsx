@@ -1,11 +1,12 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
-const HomeDescription = ({ toApp }) => {
+const HomeDescription = () => {
   return (
     <div className="description">
       <h1>Centralize o controle das suas finanças</h1>
       <span>de forma rápida e segura</span>
-      <button onClick={() => toApp(false)}>Iniciar</button>
+      <Link to={"/app"} ><button>Iniciar</button></Link>
     </div>
   );
 };

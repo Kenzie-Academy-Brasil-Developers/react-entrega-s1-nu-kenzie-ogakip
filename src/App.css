@@ -38,9 +38,10 @@ button {
 
 .main {
   width: 100vw;
-  min-height: 82vh;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
+  background-color: whitesmoke;
 }
 
 @media screen and (min-width: 768px) {

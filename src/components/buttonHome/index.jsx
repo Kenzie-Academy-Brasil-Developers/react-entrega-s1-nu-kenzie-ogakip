@@ -1,11 +1,15 @@
-import "./style.css";
+import "./style.js";
+import { Link } from "react-router-dom";
+import { ButtonGoHome } from "./style.js";
 
-const ButtonHome = ({ toHome }) => {
+const ButtonHome = () => {
   return (
     <div>
-      <button className="buttonHome" onClick={() => toHome(true)}>
-        Inicio
-      </button>
+      <Link to={"/"} >
+        <ButtonGoHome>
+          Inicio
+        </ButtonGoHome>
+      </Link>
     </div>
   );
 };
